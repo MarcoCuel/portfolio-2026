@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.button {
+   @include flex;
+   gap: rem(12);
+   background-color: var(--text);
+   color: var(--bg);
+   font-weight: 500;
+   padding: rem(8) rem(12);
+   border-radius: rem(12);
+
+   &:hover {
+      color: var(--bg);
+   }
+
+   svg {
+      width: rem(16);
+      height: rem(16);
+      margin-inline: rem(-2);
+   }
+
+   &--outline {
+      background-color: transparent;
+      border: 1px solid rgba($white, 0.2);
+      color: var(--text);
+
+      &:hover {
+         color: var(--text);
+      }
+   }
+}

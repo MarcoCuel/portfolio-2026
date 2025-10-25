@@ -1,0 +1,24 @@
+$black: #010101;
+$white: #efefef;
+$grey: #575757;
+
+:root {
+  --vh: 100%;
+  --bg: #{$black};
+  --text: #{$white};
+}
+
+[data-theme="light"] {
+  --bg: #{$white};
+  --text: #{$black};
+}
+
+$ease: cubic-bezier(0.65, 0, 0.35, 1);
+$ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+
+$font: "Uncut Sans", sans-serif;
+
+$sm: 576px;
+$md: 768px;
+$lg: 1200px;
+$xl: 1723px;

@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.site__grid {
+   position: fixed;
+   width: 100%;
+   height: 100dvh;
+   margin-inline: auto;
+   inset: 0;
+   pointer-events: none;
+   mix-blend-mode: difference;
+   @include flex(space-between);
+   gap: rem(24);
+   padding-inline: rem(24);
+   z-index: 11;
+
+   div {
+      background-color: rgba($white, 0.02);
+      width: 100%;
+      height: 0%;
+   }
+
+   &.active {
+      div {
+         height: 100%;
+      }
+   }
+}

@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.list {
+   padding: rem(12);
+   @include flex(flex-start, flex-start, column);
+   gap: rem(12);
+   flex: 1;
+}
+
+.page {
+   &__content {
+      width: 100%;
+      @include flex(stretch, flex-start, column);
+      gap: rem(40);
+      padding: rem(24);
+      font-size: rem(20);
+      text-wrap: balance;
+
+      p {
+         max-width: rem(600);
+      }
+   }
+}

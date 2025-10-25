@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.tag {
+   background-color: rgba(white, 0.1);
+   padding: rem(8) rem(12);
+   border-radius: rem(40);
+   font-weight: 500;
+   letter-spacing: 0;
+   font-size: rem(14);
+   @include flex;
+   gap: rem(8);
+}

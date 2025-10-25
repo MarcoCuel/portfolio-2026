@@ -1,0 +1,69 @@
+@use 'variables' as *;
+@use 'sass:string';
+@use 'sass:math';
+
+// Breakpoint Mixin
+@mixin breakpoint($class) {
+  @if $class == sm {
+    @media (min-width: $sm) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: $md) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: $lg) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: sm, md, lg, xl";
+  }
+}
+
+@mixin breakpointMax($class) {
+  @if $class == sm {
+    @media (max-width: ($sm - 1)) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (max-width: ($md - 1)) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (max-width: ($lg - 1)) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media (max-width: ($xl - 1)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: sm, md, lg, xl";
+  }
+}
+
+$html-font-size: 16px;
+
+@function stripUnit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{math.div(stripUnit($pxValue), stripUnit($html-font-size))}rem;
+}
+
+@mixin flex($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin vfit($property, $value) {
+  #{$property}: calc(min(#{$value}vw, calc(#{$value}vh * 2.3)));
+}
