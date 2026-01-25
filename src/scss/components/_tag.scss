@@ -9,5 +9,12 @@
    letter-spacing: 0;
    font-size: rem(14);
    @include flex;
-   gap: rem(8);
+   gap: rem(12);
+
+   span {
+      background-color: rgb(40, 219, 0);
+      width: rem(6);
+      height: rem(6);
+      border-radius: 50%;
+   }
 }

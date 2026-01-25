@@ -14,7 +14,7 @@
          $link_title = $link['title'];
          $link_target = $link['target'] ? $link['target'] : '_self';
          ?>
-         <a class="button button--outline" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?> <?php if($link_target == "_blank") : ?><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg> <?php endif; ?></a>
+         <a class="button button--outline" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>" rel="noreferrer noopener"><?php echo esc_html( $link_title ); ?> <?php if($link_target == "_blank") : ?><?php get_template_part('partials/icon/arrow') ?><?php else : ?><?php get_template_part('partials/icon/load') ?><?php endif; ?></a>
       <?php endif; ?>
       <span><?php the_field('year'); ?></span>
    </div>

@@ -9,6 +9,7 @@
    font-weight: 500;
    padding: rem(8) rem(12);
    border-radius: rem(12);
+   transition: all 0.3s $ease;
 
    &:hover {
       color: var(--bg);
@@ -20,13 +21,28 @@
       margin-inline: rem(-2);
    }
 
+   @keyframes rotate {
+      from {
+         transform: rotate(0deg);
+      }
+      to {
+         transform: rotate(360deg);
+      }
+   }
+
+   .load {
+      opacity: 0.5;
+      animation: rotate 3s linear infinite;
+   }
+
    &--outline {
       background-color: transparent;
-      border: 1px solid rgba($white, 0.2);
+      border: 1px solid rgba($white, 0.12);
       color: var(--text);
 
       &:hover {
-         color: var(--text);
+         background-color: $white;
+         color: $black;
       }
    }
 }

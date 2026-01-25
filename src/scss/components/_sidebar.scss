@@ -36,7 +36,39 @@
       h1 {
          font-size: rem(18);
          font-weight: 500;
+         margin-right: rem(8);
       }
+   }
+
+   &__time {
+      margin-left: auto;
+      font-size: rem(14);
+      font-weight: 500;
+      color: rgba($white, 0.5);
+   }
+
+   &__text {
+      font-size: rem(24);
+      line-height: 1.1;
+      padding: rem(24);
+      padding-top: rem(12);
+      text-wrap: balance;
+      max-width: 80%;
+
+      @include flex(flex-start);
+      flex-wrap: wrap;
+      gap: rem(12) rem(24);
+   }
+
+   &__menu {
+      font-size: rem(24);
+      line-height: 1.1;
+      padding: rem(24);
+
+      @include flex(center, flex-start, column);
+      gap: rem(12) rem(24);
+
+      flex: 1;
    }
 
    &__end {
@@ -53,7 +85,7 @@
       }
 
       span {
-         opacity: 0.5;
+         color: rgba($white, 0.5);
          font-size: rem(14);
       }
    }

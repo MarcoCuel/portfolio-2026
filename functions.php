@@ -1,3 +1,4 @@
+
 <?php
 
 define( 'TT_FUNCTIONS', get_template_directory() . '/inc' );

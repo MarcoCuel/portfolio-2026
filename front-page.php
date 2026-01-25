@@ -18,4 +18,9 @@ $the_query = new WP_Query( $args ); ?>
    <?php wp_reset_postdata(); ?>
 <?php endif; ?>
 
+<div class="contact__modal">
+   <h5>Contact form</h5>
+   <?php echo do_shortcode('[contact-form-7 id="1c34891" title="Contact form"]') ?>
+</div>
+
 <?php get_footer(); ?>
